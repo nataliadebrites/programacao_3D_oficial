@@ -2,9 +2,9 @@
 
 :root{
     --cor-de-fundo:#c985e4;
-    --verde:#cdafe9;
+    --verde:#5c4174;
     --branco:#FFFFFF;
-    --botao-ativo:#9a6aa8;
+    --botao-ativo:#c76ecf;
     --botao-inativo: rgba(58, 55, 94, 0.5);
     --texto-fundo:rgba(58, 55, 94, 0.3);
 }
@@ -56,7 +56,32 @@ body{
 }
 
 .botoes{
-    display: flex;
+    display: block;
+}
+
+.botao.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
+.abas-textos{
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+.aba-conteudo.ativo{
+    display: block;
+}
+.aba-conteudo{
+    display: none;
+}
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
 }
 @media screen  and (min-width: 768px) {
     .botoes{
@@ -72,7 +97,3 @@ body{
     }
 }
 
-.ativo{
-    background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--verde);
-}
